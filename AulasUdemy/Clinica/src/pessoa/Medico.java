@@ -1,4 +1,4 @@
-package pessoas;
+package pessoa;
 
 public class Medico {
 }

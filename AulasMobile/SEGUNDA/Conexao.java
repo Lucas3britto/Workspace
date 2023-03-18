@@ -1,0 +1,27 @@
+import java.io.ObjectImputStream;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+
+public class Conexao {
+    public static void send(Socket socket, Object object) {
+        ObjectOutputStream out;
+        try {
+            out = new ObjectOutputStream(socket.getOutputStream());
+            out.writeObject(object);
+        } catch (Exception e) {
+            System.out.println("Problema no ObjectOutputStream" + e);
+        }
+    }
+    public static Object receive (Socket socket){
+        ObjectOutputStream in;
+        Object object = null;
+        try{
+            in = new ObjectinputStream(socket.getInputStream());
+            object = in.readObject();
+        }
+        catch (Exception e){
+            System.out.println("Problema no inputStream"+ e);
+        }
+        return object;
+    }
+}

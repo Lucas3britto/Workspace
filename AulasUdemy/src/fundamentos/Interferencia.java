@@ -1,2 +1,7 @@
-package fundamentos;public class Interferencia {
+package fundamentos;
+
+public class Interferencia {
+    public static void main(String[] args) {
+
+    }
 }

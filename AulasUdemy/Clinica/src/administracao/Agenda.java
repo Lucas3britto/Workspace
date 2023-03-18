@@ -1,2 +1,4 @@
-package administracao;public class Agenda {
+package administracao;
+
+public class Agenda {
 }
